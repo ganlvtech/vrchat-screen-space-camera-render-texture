@@ -131,6 +131,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1617072389774330378}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &69612719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69612718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1783056023, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowCollisionOwnershipTransfer: 1
 --- !u!1 &358170787
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +226,7 @@ GameObject:
   - component: {fileID: 874126546}
   - component: {fileID: 874126551}
   - component: {fileID: 874126550}
+  - component: {fileID: 874126552}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -365,6 +379,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &874126552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874126545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1783056023, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowCollisionOwnershipTransfer: 1
 --- !u!1 &1038011467
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +532,7 @@ GameObject:
   - component: {fileID: 1084730728}
   - component: {fileID: 1084730732}
   - component: {fileID: 1084730731}
+  - component: {fileID: 1084730733}
   m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
@@ -657,6 +685,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1084730733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084730726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1783056023, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowCollisionOwnershipTransfer: 1
 --- !u!1 &1438294680
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +712,7 @@ GameObject:
   - component: {fileID: 1438294684}
   - component: {fileID: 1438294683}
   - component: {fileID: 1438294682}
+  - component: {fileID: 1438294687}
   m_Layer: 13
   m_Name: Cylinder
   m_TagString: Untagged
@@ -825,6 +867,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438294680}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1438294687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438294680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1783056023, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowCollisionOwnershipTransfer: 1
 --- !u!1 &1787983409
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +1045,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5377072513385427319, guid: 95455d8fed0994b44a96ff59e957dd09,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 69612719}
   m_SourcePrefab: {fileID: 100100000, guid: 95455d8fed0994b44a96ff59e957dd09, type: 3}
 --- !u!114 &3231720197660963110
 MonoBehaviour:
@@ -1170,8 +1229,8 @@ MonoBehaviour:
   useAssignedLayers: 0
   DynamicPrefabs: []
   DynamicMaterials:
-  - {fileID: 2100000, guid: c9ca7c0ae581b214fa96222d8c3d9d8f, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c9ca7c0ae581b214fa96222d8c3d9d8f, type: 2}
   - {fileID: 2100000, guid: ae82ac87991058f46b0bca56526fb67c, type: 2}
   - {fileID: 2100000, guid: 876fa43a1b6ac824ea414ff240868e8b, type: 2}
   LightMapsNear: []
@@ -1227,31 +1286,31 @@ MonoBehaviour:
   RenderReflectionIntensity: 0
   RenderSkybox: {fileID: 0}
   NetworkIDs:
-  - gameObject: {fileID: 6485110009358243044}
+  - gameObject: {fileID: 874126545}
     ID: 10
     SerializedTypeNames:
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 3480278762663670689}
+    - VRC.SDK3.Components.VRCPickup
+    - VRC.SDK3.Components.VRCObjectSync
+  - gameObject: {fileID: 1438294680}
     ID: 11
     SerializedTypeNames:
-    - VRC.Udon.UdonBehaviour
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 69612718}
+    - VRC.SDK3.Components.VRCPickup
+    - VRC.SDK3.Components.VRCObjectSync
+  - gameObject: {fileID: 1084730726}
     ID: 12
     SerializedTypeNames:
     - VRC.SDK3.Components.VRCPickup
-  - gameObject: {fileID: 874126545}
+    - VRC.SDK3.Components.VRCObjectSync
+  - gameObject: {fileID: 69612718}
     ID: 13
     SerializedTypeNames:
     - VRC.SDK3.Components.VRCPickup
-  - gameObject: {fileID: 1438294680}
+    - VRC.SDK3.Components.VRCObjectSync
+  - gameObject: {fileID: 3480278762663670689}
     ID: 14
     SerializedTypeNames:
-    - VRC.SDK3.Components.VRCPickup
-  - gameObject: {fileID: 1084730726}
-    ID: 15
-    SerializedTypeNames:
-    - VRC.SDK3.Components.VRCPickup
+    - VRC.Udon.UdonBehaviour
+    - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   NavigationAreas: []
